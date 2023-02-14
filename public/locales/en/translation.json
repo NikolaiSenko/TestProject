@@ -1,5 +1,8 @@
 {
   "language": "English",
   "loading": "Loading...",
-  "page not found": "Page not found"
+  "page not found": "Page not found",
+  "Something went wrong": "Something went wrong",
+  "reload page": "Reload page",
+  "throw error": "Throw error"
 }

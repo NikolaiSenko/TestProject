@@ -1,5 +1,8 @@
 {
   "language": "Русский",
   "loading": "Загрузка...",
-  "page not found": "Страница не найдена"
+  "page not found": "Страница не найдена",
+  "Something went wrong": "Произошла непредвиденная ошибка",
+  "reload page": "Перезагрузить страницу",
+  "throw error": "Бросить ошибку"
 }
