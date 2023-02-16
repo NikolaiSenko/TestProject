@@ -1,11 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
-export interface BugButtonProps {
-  className?: string
-}
-
-export const BugButton = ({ className }: BugButtonProps) => {
+export const BugButton = () => {
   const { t } = useTranslation()
   const [error, setError] = useState(false)
 
