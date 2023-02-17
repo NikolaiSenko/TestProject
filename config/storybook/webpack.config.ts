@@ -13,15 +13,17 @@ export default ({ config }: { config: webpack.Configuration }) => {
   config.resolve?.modules?.push(paths.src)
   config.resolve?.extensions?.push('.ts', '.tsx')
 
-  // // eslint-disable-next-line no-param-reassign
-  // const configRules = config.module?.rules?.map((rule: RuleSetRule) => {
-  //   if (/svg/.test(rule.test as string)) {
-  //     return { ...rule, exclude: /\.svg$/i }
-  //   }
-  // config?.module?.rules = configRules 
-
-  //   return rule
-  // })
+  if(config.module) {
+      // eslint-disable-next-line
+    config.module.rules = config.module.rules?.map((rule: any) => {
+      console.log(rule)
+      if (/svg/.test(rule.test as string)) {
+          return { ...rule, exclude: /\.svg$/i }
+      }
+  
+      return rule as RuleSetRule
+  })
+  }
 
   config.module?.rules?.push({
     test: /\.svg$/,

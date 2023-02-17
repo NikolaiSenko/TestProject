@@ -22,9 +22,7 @@ module.exports = {
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
     'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': ['warn', {
-      args: 'all'
-    }],
+    '@typescript-eslint/no-unused-vars': 'warn',
     'react/require-default-props': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-props-no-spreading': 'warn',
@@ -56,4 +54,4 @@ module.exports = {
       'i18next/no-literal-string': 'off'
     }
   }]
-};
+}
