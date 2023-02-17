@@ -43,7 +43,8 @@ module.exports = {
     '@typescript-eslint/naming-convention': 'off',
     'comma-dangle': 'off',
     '@typescript-eslint/comma-dangle': 'off',
-    'react/display-name': 'off'
+    'react/display-name': 'off',
+    'linebreak-style': 0
   },
   globals: {
     __IS__DEV: true
