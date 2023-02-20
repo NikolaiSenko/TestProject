@@ -11,6 +11,8 @@ i18n
   .init({
     fallbackLng: 'en',
     debug: __IS_DEV__,
+    defaultNS: 'translation',
+    nsSeparator: ':',
 
     interpolation: {
       escapeValue: false // not needed for react as it escapes by default

@@ -5,5 +5,6 @@
   "Something went wrong": "Произошла непредвиденная ошибка",
   "reload page": "Перезагрузить страницу",
   "throw error": "Бросить ошибку",
-  "toggle": "Перключить тему"
+  "toggle": "Перключить тему",
+  "short language": "Ru"
 }
