@@ -44,7 +44,8 @@ module.exports = {
     'comma-dangle': 'off',
     '@typescript-eslint/comma-dangle': 'off',
     'react/display-name': 'off',
-    'linebreak-style': 0
+    'linebreak-style': 0,
+    '@typescript-eslint/no-var-requires': 'off'
   },
   globals: {
     __IS__DEV: true
