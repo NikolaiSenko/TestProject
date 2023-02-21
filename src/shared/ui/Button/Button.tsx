@@ -7,6 +7,8 @@ export enum ButtonTheme {
   OUTLINE = 'outline',
   BACKGROUND = 'background',
   BACKGROUND_INVERTED = 'backgroundInverted',
+  OUTLINE_INVERTED = 'outlineInverted',
+  CLEAR_INVERTED = 'clerInverted',
 }
 
 export enum ButtonSize {
@@ -32,20 +34,18 @@ export const Button: FC<ButtonProps> = (props) => {
     ...otherProps
   } = props
 
-
   const mods: Record<string, boolean> = {
     [cls.square]: square,
-}
+  }
 
   const additionals: string[] = [className, cls[theme], cls[size]]
-  
+
   return (
     <button
       className={classNames(cls.Button, mods, additionals)}
       {...otherProps}
     >
-      {
-  }
+      {}
       {children}
     </button>
   )
