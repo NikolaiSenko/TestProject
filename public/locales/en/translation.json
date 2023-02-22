@@ -7,5 +7,7 @@
   "throw error": "Throw error",
   "toggle": "Toggle theme",
   "short language": "En",
-  "sign in": "Sign in"
+  "sign in": "Sign in",
+  "increment": "Increment",
+  "decrement": "Decrement"
 }

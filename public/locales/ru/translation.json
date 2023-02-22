@@ -7,5 +7,7 @@
   "throw error": "Бросить ошибку",
   "toggle": "Перключить тему",
   "short language": "Ru",
-  "sign in": "Войти"
+  "sign in": "Войти",
+  "increment": "Увеличить",
+  "decrement": "Уменьшить"
 }
