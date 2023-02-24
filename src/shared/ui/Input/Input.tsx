@@ -24,7 +24,6 @@ export const Input = memo((props: InputProps) => {
     autofocus,
     ...otherProps
   } = props
-
   const ref = useRef<HTMLInputElement>()
 
   const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
