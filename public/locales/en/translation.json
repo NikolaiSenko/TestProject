@@ -9,5 +9,7 @@
   "short language": "En",
   "sign in": "Sign in",
   "increment": "Increment",
-  "decrement": "Decrement"
+  "decrement": "Decrement",
+  "input username": "Username",
+  "input password": "Password"
 }

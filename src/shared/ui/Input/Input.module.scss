@@ -1,0 +1,16 @@
+.InputWrapper {
+  display: flex;
+  gap: 5px;
+}
+
+.input {
+  flex-grow: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--primary-color);
+
+  &:focus {
+    outline: none;
+  }
+}
