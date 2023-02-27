@@ -16,7 +16,6 @@ export default ({ config }: { config: webpack.Configuration }) => {
   if (config.module) {
     // eslint-disable-next-line
     config.module.rules = config.module.rules?.map((rule: any) => {
-      console.log(rule)
       if (/svg/.test(rule.test as string)) {
         return { ...rule, exclude: /\.svg$/i }
       }
