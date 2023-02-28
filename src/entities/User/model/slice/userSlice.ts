@@ -13,12 +13,12 @@ export const userSlice = createSlice({
     },
     initAuthData: (state) => {
       const user = localStorage.getItem(USER_LOCALSTORAGE_KEY)
-      if(user) {
+      if (user) {
         state.authData = JSON.parse(user)
       }
     },
     logout: (state) => {
-      state.authData= undefined
+      state.authData = undefined
       localStorage.removeItem(USER_LOCALSTORAGE_KEY)
     },
   },

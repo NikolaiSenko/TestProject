@@ -22,13 +22,15 @@ export const Modal = (props: ModalProps) => {
 
   const closeHandler = useCallback(() => {
     if (onClose) {
-      setIsClosing(true)
-      timeRef.current = setTimeout(() => {
-        onClose()
-        setIsClosing(false)
-      }, ANIMATION_DELAY)
+        setIsClosing(true)
+        console.log(isOpen, 'ISOPENSTART')
+        timeRef.current = setTimeout(() => {
+            onClose()
+            setIsClosing(false)
+        }, ANIMATION_DELAY)
     }
-  }, [onClose])
+
+}, [onClose,isOpen])
 
   const onKeyDown = useCallback(
     (e: KeyboardEvent) => {
