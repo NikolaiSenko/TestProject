@@ -1,6 +1,5 @@
 import {
   configureStore,
-  DeepPartial,
   ReducersMapObject,
 } from '@reduxjs/toolkit'
 import { counterReducer } from 'entities/Counter'
@@ -32,3 +31,5 @@ export function createReduxStore(
   store.reducerManager = reducerManager
   return store
 }
+
+export type AppDispatch = ReturnType<typeof createReduxStore>['dispatch']

@@ -14,5 +14,6 @@
   "input password": "Password",
   "auth error": "Wrong username or password",
   "auth form": "Auth Form",
-  "sign out": "Sign out"
+  "sign out": "Sign out",
+  "profile page": "Profile page"
 }
