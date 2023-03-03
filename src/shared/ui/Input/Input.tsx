@@ -1,4 +1,4 @@
-import { InputHTMLAttributes, memo, useEffect, useRef } from 'react'
+import { InputHTMLAttributes, memo, MutableRefObject, useEffect, useRef } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './Input.module.scss'
 
@@ -24,7 +24,7 @@ export const Input = memo((props: InputProps) => {
     autofocus,
     ...otherProps
   } = props
-  const ref = useRef<HTMLInputElement>()
+  const ref = useRef() as MutableRefObject<HTMLInputElement>
 
   const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     onChange?.(e.target.value)
