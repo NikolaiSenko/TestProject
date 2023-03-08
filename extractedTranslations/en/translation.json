@@ -1,5 +1,12 @@
 {
+  "Age": "",
+  "Avatar": "",
+  "Avatar not found": "",
+  "Cancel": "",
+  "City": "",
+  "Currency": "",
   "Edit": "",
+  "Error occurs in Profile": "",
   "Firstname": "",
   "Lastname": "",
   "Lorem ipsum dolor, sit amet consectetur adipisicing elit": {
@@ -7,7 +14,10 @@
       "": ""
     }
   },
+  "Save": "",
   "Something went wrong": "",
+  "Try to reload the page": "",
+  "Username": "",
   "about page": "",
   "auth error": "",
   "auth form": "",
@@ -26,5 +36,6 @@
   "sign in": "",
   "sign out": "",
   "throw error": "",
-  "toggle": ""
+  "toggle": "",
+  "Укажите страну": ""
 }

@@ -15,5 +15,8 @@
   "auth error": "Wrong username or password",
   "auth form": "Auth Form",
   "sign out": "Sign out",
-  "profile page": "Profile page"
+  "profile page": "Profile page",
+  "Edit": "Edit",
+  "Cancel": "Cancel",
+  "Save": "Save"
 }

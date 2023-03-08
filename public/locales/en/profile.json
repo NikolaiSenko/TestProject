@@ -1,6 +1,13 @@
 {
   "profile page": "Profile page",
-  "Edit": "Edit",
   "Firstname": "Firstname",
-  "Lastname": "Lastname"
+  "Lastname": "Lastname",
+  "Error occurs in Profile": "Error occurs while loading Profile",
+  "Try to reload the page": "Try to reload the page",
+  "Age": "Age",
+  "City": "City",
+  "Username": "Username",
+  "Avatar": "Avatar URL",
+  "Avatar not found": "Avatar not found",
+  "Currency": "Currency"
 }

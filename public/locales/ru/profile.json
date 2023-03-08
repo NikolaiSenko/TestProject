@@ -1,6 +1,13 @@
 {
   "profile page": "Профиль",
-  "Edit": "Редактировать",
   "Firstname": "Имя",
-  "Lastname": "Фамилия"
+  "Lastname": "Фамилия",
+  "Error occurs in Profile": "Произошла ошибка при загрузке профиля",
+  "Try to reload the page": "Попробуйте перезагрузить страницу",
+  "Age": "Ваш возраст",
+  "City": "Ваш город",
+  "Username": "Имя пользователя",
+  "Avatar": "Сылка на аватар",
+  "Avatar not found": "Аватар не найден",
+  "Currency": "Укажите валюту"
 }

@@ -8,7 +8,7 @@ import { SidebarItem } from '../SidebarItem/SidebarItem'
 import cls from './Sidebar.module.scss'
 
 export interface SidebarProps {
-  className?: string;
+  className?: string
 }
 
 export const Sidebar = ({ className }: SidebarProps) => {
