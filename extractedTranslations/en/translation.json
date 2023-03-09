@@ -1,20 +1,28 @@
 {
+  "": "",
   "Age": "",
   "Avatar": "",
   "Avatar not found": "",
   "Cancel": "",
   "City": "",
+  "Country": "",
   "Currency": "",
+  "Data ": "",
+  "Data is missed": "",
   "Edit": "",
   "Error occurs in Profile": "",
   "Firstname": "",
+  "Incorrect age": "",
+  "Incorrect country": "",
   "Lastname": "",
   "Lorem ipsum dolor, sit amet consectetur adipisicing elit": {
     " Velit, beatae": {
       "": ""
     }
   },
+  "Name and surname": "",
   "Save": "",
+  "Server error": "",
   "Something went wrong": "",
   "Try to reload the page": "",
   "Username": "",

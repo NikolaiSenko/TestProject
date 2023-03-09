@@ -62,11 +62,12 @@ module.exports = {
     'linebreak-style': 0,
     '@typescript-eslint/no-var-requires': 'off',
     'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'error'
+    'react-hooks/exhaustive-deps': 'error',
   },
   globals: {
     __IS_DEV__: true,
     __API__: true,
+    __PROJECT__: true,
   },
   overrides: [
     {

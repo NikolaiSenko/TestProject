@@ -9,5 +9,11 @@
   "Username": "Username",
   "Avatar": "Avatar URL",
   "Avatar not found": "Avatar not found",
-  "Currency": "Currency"
+  "Currency": "Currency",
+  "Incorrect age": "Incorrect age!",
+  "Incorrect country": "Incorrect country!",
+  "Name and surname": "You have to put both Firstname and Surname",
+  "Server error": "Server errror while saving profile",
+  "Data is missed": "Data is missed",
+  "Country": "Your country"
 }
