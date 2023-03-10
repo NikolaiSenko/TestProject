@@ -33,6 +33,7 @@ Normal.decorators = [
         username: 'admin',
         avatar: Avatar,
       },
+      readonly: true,
     },
   }),
 ]
@@ -53,6 +54,7 @@ Dark.decorators = [
         username: 'admin',
         avatar: Avatar,
       },
+      readonly: true,
     },
   }),
 ]
