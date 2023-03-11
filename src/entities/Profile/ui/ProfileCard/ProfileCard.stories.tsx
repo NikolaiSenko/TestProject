@@ -4,7 +4,6 @@ import { Country } from 'entities/Country'
 import { Currency } from 'entities/Currency'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import { ProfileCard } from './ProfileCard'
-import Avatar from 'shared/assets/tests/storybook.jpg'
 
 export default {
   title: 'entity/ProfileCard',
@@ -28,7 +27,7 @@ Primary.args = {
     country: Country.Armenia,
     city: 'Minsk',
     username: 'admin',
-    avatar: Avatar,
+    avatar: 'https://i.pinimg.com/564x/f5/27/41/f52741fb62bf1d821948a49204406bdc.jpg',
   },
 }
 
@@ -42,7 +41,7 @@ Dark.args = {
     country: Country.Armenia,
     city: 'Minsk',
     username: 'admin',
-    avatar: Avatar,
+    avatar: 'https://i.pinimg.com/564x/f5/27/41/f52741fb62bf1d821948a49204406bdc.jpg',
   },
 }
 Dark.decorators = [ThemeDecorator(Theme.DARK)]
