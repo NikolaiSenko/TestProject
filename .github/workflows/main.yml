@@ -7,7 +7,7 @@ on:
     branches: [my_develop]
 jobs:
   Pipeline:
-    runs-on: windows-2019
+    runs-on: windows-2022
     strategy:
       matrix:
         node-version: [17.x]
