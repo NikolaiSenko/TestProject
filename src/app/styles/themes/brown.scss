@@ -1,9 +1,16 @@
 .app_brown_theme {
   --bg-color: #f8fbf4;
-  --inverted-bg-color: #7c8d5f;
+  --inverted-bg-color: #687c46;
 
   --primary-color: #7c8d5f;
   --secondary-color: #736b4e;
-  --inverted-primary-color: #f8fbf4;
+  --inverted-primary-color: #edb047;
   --inverted-secondary-color: #736b4e;
+
+  // skeleton
+  --skeleton-color: #fff;
+  --skeleton-shadow: rgba(0 0 0 / 20%);
+
+  // code
+  --code-bg: #ede6ca;
 }

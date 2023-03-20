@@ -6,7 +6,7 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { ProfileCard } from './ProfileCard'
 
 export default {
-  title: 'entity/ProfileCard',
+  title: 'entities/ProfileCard',
   component: ProfileCard,
   argTypes: {
     backgroundColor: { control: 'color' },

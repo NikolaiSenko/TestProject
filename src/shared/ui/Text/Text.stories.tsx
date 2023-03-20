@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import { Theme } from 'app/providers/ThemeProvider'
-import { Text, TextTheme } from './Text'
+import { Text, TextSize, TextTheme } from './Text'
 export default {
   title: 'shared/Text',
   component: Text,
@@ -54,4 +54,11 @@ ErrorText.args = {
   title: 'Lorem ipsum dolor, sit amet consectetur',
   text: 'Lorem ipsum dolor, sit amet consectetur',
   theme: TextTheme.ERROR
+}
+
+export const SizeL = Template.bind({})
+SizeL.args = {
+  title: 'Lorem ipsum dolor, sit amet consectetur',
+  text: 'Lorem ipsum dolor, sit amet consectetur',
+  size: TextSize.L
 }
