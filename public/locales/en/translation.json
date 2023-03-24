@@ -5,7 +5,6 @@
   "Something went wrong": "Something went wrong",
   "reload page": "Reload page",
   "throw error": "Throw error",
-  "toggle": "Toggle theme",
   "short language": "En",
   "sign in": "Sign in",
   "increment": "Increment",
@@ -18,5 +17,8 @@
   "profile page": "Profile page",
   "Edit": "Edit",
   "Cancel": "Cancel",
-  "Save": "Save"
+  "Save": "Save",
+  "No comments": "No comments",
+  "Send": "Send",
+  "Enter your comment": "Enter your comment"
 }

@@ -5,7 +5,6 @@
   "Something went wrong": "Произошла непредвиденная ошибка",
   "reload page": "Перезагрузить страницу",
   "throw error": "Бросить ошибку",
-  "toggle": "Перключить тему",
   "short language": "Ru",
   "sign in": "Войти",
   "increment": "Увеличить",
@@ -18,5 +17,8 @@
   "Edit": "Редактировать",
   "Cancel": "Отменить",
   "Save": "Сохранить",
-  "Error occured while loading": "Произошла ошибка при загрузке статьи"
+  "Error occured while loading": "Произошла ошибка при загрузке статьи",
+  "No comments": "Комментарии отсутствуют",
+  "Send": "Отправить",
+  "Enter your comment": "Введите ваш комментарий"
 }
