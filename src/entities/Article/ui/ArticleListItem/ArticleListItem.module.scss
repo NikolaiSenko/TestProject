@@ -1,14 +1,44 @@
 .BIG {
+  .views {
+    margin-left: auto;
+    margin-right: 8px;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .date {
+    margin-left: auto;
+  }
+
+  .title {
+    margin-top: 8px;
+  }
+
+  .img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+  }
+
+  .textBlock {
+    max-height: 200px;
+    overflow-y: hidden;
+  }
 }
 
 .SMALL {
   width: 230px;
-
-  .card {
-    padding: 15px;
-    border-radius: 12px;
-    background: var(--card-bg);
-  }
+  transition: 0.2s;
+  cursor: pointer;
 
   .imageWrapper {
     width: 200px;
@@ -19,18 +49,31 @@
   .img {
     width: 200px;
     height: 200px;
+    object-fit: cover;
+    margin: 16px 0;
   }
 
   .date {
     position: absolute;
     right: 0;
     top: 0;
+    display: none;
+    font-weight: bold;
+  }
+
+  &:hover {
+    opacity: 0.8;
+    transform: scale(1.01);
+
+    .date {
+      display: block;
+    }
   }
 
   .infoWrapper {
     display: flex;
     align-items: center;
-    margin-top: 8px;
+    margin-top: 16px;
   }
 
   .types p {
