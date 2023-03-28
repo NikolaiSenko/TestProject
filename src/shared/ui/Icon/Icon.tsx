@@ -11,6 +11,5 @@ export const Icon = (props:IconProps) => {
 
    return (
       <Svg className={classNames(cls.Icon, {}, [className])}/>
-
    )
 }
