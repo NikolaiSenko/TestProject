@@ -5,5 +5,19 @@
   "Article not found": "Article not found",
   "Error occured while loading": "Error occured while loading article",
   "Comments": "Comments",
-  "Go back to list": "Go back to the list"
+  "Go back to list": "Go back to the list",
+  "Sort by": "Sort by",
+  "Search": "Search",
+  "ascending": "ascending",
+  "descending": "descending",
+  "in": "In",
+  "date": "date",
+  "title": "title",
+  "views": "views",
+  "Economics": "Economics",
+  "All": "All",
+  "IT": "IT",
+  "Science": "Science",
+  "Articles Not Found": "Articles Not Found",
+  "You may like": "You may like"
 }

@@ -10,18 +10,14 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: 'en',
-    debug: __IS_DEV__,
+    debug: false,
     defaultNS: 'translation',
     nsSeparator: ':',
 
     interpolation: {
       escapeValue: false // not needed for react as it escapes by default
     },
-
-    backend: {
-      loadPath: '/locales/{{lng}}/{{ns}}.json'
-    },
-    react: { useSuspense: false },
+    react: { useSuspense: true },
   })
 
 export default i18n

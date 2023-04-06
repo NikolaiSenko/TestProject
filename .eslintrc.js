@@ -47,7 +47,7 @@ module.exports = {
       'error',
       {
         markupOnly: true,
-        ignoreAttribute: ['data-testid', 'to', 'name'],
+        ignoreAttribute: ['data-testid', 'to', 'name', 'target'],
       },
     ],
     '@typescript-eslint/prefer-nullish-coalescing': 'off',

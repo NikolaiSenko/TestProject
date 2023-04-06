@@ -4,5 +4,18 @@
   "articles": "Статьи",
   "Article not found": "Статья не найдена",
   "Comments": "Комментарии",
-  "Go back to list": "Назад к списку"
+  "Go back to list": "Назад к списку",
+  "Sort by": "Сортировать по",
+  "Search": "Поиск",
+  "ascending": "возрастанию",
+  "descending": "убыванию",
+  "in": "По",
+  "date": "Дате",
+  "title": "Названию",
+  "views": "просмотрам",
+  "All": "Все",
+  "IT": "Айти",
+  "Science": "Наука",
+  "Articles Not Found": "Статьи не найдены",
+  "You may like": "Вам также может понравится"
 }

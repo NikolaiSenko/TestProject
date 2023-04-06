@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
+import { Page } from 'widgets/Page/Page'
 import cls from './NotFoundPage.module.scss'
 
 export interface NotFoundPageProps {
@@ -9,8 +10,8 @@ export interface NotFoundPageProps {
 export const NotFoundPage = ({ className }: NotFoundPageProps) => {
   const { t } = useTranslation()
   return (
-    <div className={classNames(cls.NotFoundPage, {}, [className])}>
+    <Page className={classNames(cls.NotFoundPage, {}, [className])}>
         {t('page not found')}
-    </div>
+    </Page>
   )
 }
