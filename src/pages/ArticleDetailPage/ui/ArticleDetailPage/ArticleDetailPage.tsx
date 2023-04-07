@@ -28,6 +28,7 @@ import { getArticleRecommendations } from '../../model/slices/articleDetailsPage
 import { fetchArticleRecommendations } from '../../model/services/fetchArticleRecommendations/fetchArticleRecommendations'
 import {getArticleRecommendationsIsLoading} from '../../model/selectors/recommendations'
 import { articleDetailsPageReducer } from '../../model/slices'
+import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader'
 
 interface ArticleDetailPageProps {
   className?: string
@@ -61,9 +62,6 @@ const ArticleDetailPage = (props: ArticleDetailPageProps) => {
     [dispatch]
   )
 
-  const onBackToList = useCallback(() => {
-    navigate(RoutePath.articles)
-  }, [navigate])
 
   if (!id) {
     return (
@@ -76,7 +74,7 @@ const ArticleDetailPage = (props: ArticleDetailPageProps) => {
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <Page className={classNames(cls.articleDetailPage, {}, [className])}>
-        <Button onClick={onBackToList}>{t('Go back to list')}</Button>
+        <ArticleDetailsPageHeader  />
         <ArticleDetails id={id} />
         <Text
           size={TextSize.L}

@@ -2,17 +2,20 @@
   width: 100%;
   height: var(--navbar-height);
   background: var(--inverted-bg-color);
-
   display: flex;
   align-items: center;
   padding: 20px;
+}
+
+.links {
+  margin-left: auto;
 }
 
 .mainLink {
   margin-right: 15px;
 }
 
-.links {
-  margin-left: auto;
-  color: var(--inverted-primary-color);
+.appName {
+  width: var(--sidebar-width);
+  margin-left: 15px;
 }
