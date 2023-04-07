@@ -44,7 +44,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
           theme={AppLinkTheme.SECONDARY}
           className={cls.createBtn}
         >
-          {t('Создать статью')}
+          {t('Create Article')}
         </AppLink>
         <Button
           theme={ButtonTheme.OUTLINE_INVERTED}
