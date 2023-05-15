@@ -15,5 +15,7 @@
   "Name and surname": "You have to put both Firstname and Surname",
   "Server error": "Server errror while saving profile",
   "Data is missed": "Data is missed",
-  "Country": "Your country"
+  "Country": "Your country",
+  "Profile": "Profile",
+  "profile.Error with profile loading occured": "Error with profile loading occured"
 }

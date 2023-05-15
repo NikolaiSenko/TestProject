@@ -15,7 +15,13 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
+  plugins: [
+    'react',
+    '@typescript-eslint',
+    'i18next',
+    'react-hooks',
+    'senko-plugin',
+  ],
   rules: {
     quotes: [
       2,
@@ -47,7 +53,19 @@ module.exports = {
       'error',
       {
         markupOnly: true,
-        ignoreAttribute: ['data-testid', 'to', 'name', 'target'],
+        ignoreAttribute: [
+          'data-testid',
+          'to',
+          'name',
+          'target',
+          'justify',
+          'align',
+          'direction',
+          'gap',
+          'role',
+          'as',
+          'refName',
+        ],
       },
     ],
     '@typescript-eslint/prefer-nullish-coalescing': 'off',
@@ -63,6 +81,7 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
+    'senko-plugin/eslint-path-checker': 2,
   },
   globals: {
     __IS_DEV__: true,

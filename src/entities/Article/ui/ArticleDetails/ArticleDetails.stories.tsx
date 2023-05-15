@@ -4,7 +4,7 @@ import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDeco
 import {
   ArticleBlockType,
   ArticleType,
-} from 'entities/Article/model/types/article'
+} from '../../model/types/article'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import { Theme } from 'app/providers/ThemeProvider'
 export default {

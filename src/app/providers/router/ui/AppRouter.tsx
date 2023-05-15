@@ -1,4 +1,4 @@
-import { Suspense, memo, useCallback, useMemo } from 'react'
+import { Suspense, memo, useCallback } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import {
   AppRouteProps,

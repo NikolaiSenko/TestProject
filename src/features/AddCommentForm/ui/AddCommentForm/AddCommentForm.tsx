@@ -13,11 +13,11 @@ import {
 } from '../../model/slice/addCommentSlice'
 import { useSelector } from 'react-redux'
 import {
-  getAddCommentError,
   getAddCommentText,
 } from '../../model/selectors/AddCommentSelectors'
 import { useCallback } from 'react'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { HStack } from 'shared/ui/Stack'
 
 export interface AddCommentFormProps {
   className?: string
@@ -33,7 +33,7 @@ const AddCommentForm = (props: AddCommentFormProps) => {
   const { t } = useTranslation()
   const dispatch = useAppDispatch()
   const text = useSelector(getAddCommentText)
-  const error = useSelector(getAddCommentError)
+
 
   const onChangeComment = useCallback(
     (value: string) => {
@@ -49,7 +49,7 @@ const AddCommentForm = (props: AddCommentFormProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div className={classNames(cls.AddCommentForm, {}, [className])}>
+      <HStack justify='between' max className={classNames(cls.AddCommentForm, {}, [className])}>
         <Input
           className={cls.input}
           placeholder={t('Enter your comment')}
@@ -57,7 +57,7 @@ const AddCommentForm = (props: AddCommentFormProps) => {
           onChange={onChangeComment}
         />
         <Button onClick={onSendHandler}>{t('Send')}</Button>
-      </div>
+      </HStack>
     </DynamicModuleLoader>
   )
 }

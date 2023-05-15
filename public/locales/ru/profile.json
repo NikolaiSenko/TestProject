@@ -15,5 +15,7 @@
   "Name and surname": "Необходимо ввести Имя и Фамилию",
   "Server error": "Серверная ошибка при сохранении краточки профиля",
   "Data is missed": "Данные не указаны",
-  "Country": "Укажиет страну"
+  "Country": "Укажиет страну",
+  "Profile": "Профиль",
+  "profile.Error with profile loading occured": "Невозмодно отобразить профиль"
 }

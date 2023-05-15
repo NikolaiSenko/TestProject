@@ -48,17 +48,30 @@ OnlyTextDark.args = {
 }
 OnlyTextDark.decorators = [ThemeDecorator(Theme.DARK)]
 
-
 export const ErrorText = Template.bind({})
 ErrorText.args = {
   title: 'Lorem ipsum dolor, sit amet consectetur',
   text: 'Lorem ipsum dolor, sit amet consectetur',
-  theme: TextTheme.ERROR
+  theme: TextTheme.ERROR,
 }
 
 export const SizeL = Template.bind({})
 SizeL.args = {
-  title: 'Lorem ipsum dolor, sit amet consectetur',
-  text: 'Lorem ipsum dolor, sit amet consectetur',
-  size: TextSize.L
+  title: 'Title lorem ipsun',
+  text: 'Description Description Description Description',
+  size: TextSize.L,
+}
+
+export const SizeM = Template.bind({})
+SizeM.args = {
+  title: 'Title lorem ipsun',
+  text: 'Description Description Description Description',
+  size: TextSize.M,
+}
+
+export const SizeS = Template.bind({})
+SizeS.args = {
+  title: 'Title lorem ipsun',
+  text: 'Description Description Description Description',
+  size: TextSize.S,
 }

@@ -5,7 +5,7 @@ import cls from './Button.module.scss'
 export enum ButtonTheme {
   CLEAR = 'clear',
   OUTLINE = 'outline',
-  OUTLINE_RED= 'outline_red',
+  OUTLINE_RED = 'outline_red',
   BACKGROUND = 'background',
   BACKGROUND_INVERTED = 'backgroundInverted',
   OUTLINE_INVERTED = 'outlineInverted',
@@ -19,12 +19,13 @@ export enum ButtonSize {
 }
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  children: ReactNode;
-  className?: string;
-  theme?: ButtonTheme;
-  square?: boolean;
-  size?: ButtonSize;
-  disabled?: boolean;
+  children: ReactNode
+  className?: string
+  theme?: ButtonTheme
+  square?: boolean
+  size?: ButtonSize
+  disabled?: boolean
+  isButton?: boolean
 }
 
 export const Button = memo((props: ButtonProps) => {
@@ -35,6 +36,7 @@ export const Button = memo((props: ButtonProps) => {
     square,
     size = ButtonSize.M,
     disabled,
+    isButton = true,
     ...otherProps
   } = props
 
@@ -49,7 +51,7 @@ export const Button = memo((props: ButtonProps) => {
     cls[size],
   ]
 
-  return (
+  return isButton ? (
     <button
       className={classNames(cls.Button, mods, additionals)}
       {...otherProps}
@@ -58,5 +60,13 @@ export const Button = memo((props: ButtonProps) => {
       {}
       {children}
     </button>
+  ) : (
+    <span
+      className={classNames(cls.Button, mods, additionals)}
+      {...otherProps}
+    >
+      {}
+      {children}
+    </span>
   )
 })
