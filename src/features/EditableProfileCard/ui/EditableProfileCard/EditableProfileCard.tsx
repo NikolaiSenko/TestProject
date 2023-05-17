@@ -1,6 +1,5 @@
 import { classNames } from 'shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
-import cls from './EditableProfileCard.module.scss'
 import { memo, useCallback } from 'react'
 import { Country } from 'entities/Country'
 import { Currency } from 'entities/Currency'
@@ -26,7 +25,7 @@ import { EditableProfileCardHeader } from '../EditableProfileCardHeader/Editable
 
 interface EditableProfileCardProps {
   className?: string
-  profileId:string
+  profileId: string
 }
 
 const reducers: ReducersList = {
@@ -34,7 +33,7 @@ const reducers: ReducersList = {
 }
 
 export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
-  const { className,profileId } = props
+  const { className, profileId } = props
   const { t } = useTranslation('profile')
   const dispatch = useAppDispatch()
   const readonly = useSelector(getProfileReadonly)
@@ -42,7 +41,6 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
   const error = useSelector(getProfileError)
   const isLoading = useSelector(getProfileLoading)
   const validateErrors = useSelector(getProfileValidateErrors)
- 
 
   const validateErrorTranslates = {
     [ValidateProfileError.SERVER_ERROR]: t('Server error'),
@@ -122,14 +120,15 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-      <VStack max gap='8' className={classNames(cls.EditableProfileCard, {}, [className])}>
-        <EditableProfileCardHeader/>
+      <VStack max gap="8" className={classNames('', {}, [className])}>
+        <EditableProfileCardHeader />
         {validateErrors?.length &&
           validateErrors.map((err: ValidateProfileError) => (
             <Text
               theme={TextTheme.ERROR}
               text={validateErrorTranslates[err]}
               key={err}
+              data-testid={'EditableProfileCard.Error'}
             />
           ))}
         <ProfileCard
