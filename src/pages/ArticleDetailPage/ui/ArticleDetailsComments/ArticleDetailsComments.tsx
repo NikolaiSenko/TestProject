@@ -9,13 +9,13 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { VStack } from 'shared/ui/Stack'
 import { Text } from 'shared/ui/Text/Text'
 import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle'
-import { useCallback } from 'react'
+import { useCallback, Suspense } from 'react'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
 
 interface ArticleDetailsCommentsProps {
   className?: string
-  articleId: string
+  articleId?: string
 }
 
 export const ArticleDetailsComments = (props: ArticleDetailsCommentsProps) => {
@@ -38,9 +38,11 @@ export const ArticleDetailsComments = (props: ArticleDetailsCommentsProps) => {
   })
 
   return (
-    <VStack max gap='8' className={classNames('', {}, [className])}>
+    <VStack max gap="8" className={classNames('', {}, [className])}>
       <Text title={t('Comments')} />
-      <AddCommentForm onSendComment={onSendComment} />
+      <Suspense>
+        <AddCommentForm onSendComment={onSendComment} />
+      </Suspense>
       <CommentList isLoading={commentIsLoading} comments={comments} />
     </VStack>
   )

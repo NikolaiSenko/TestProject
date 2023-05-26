@@ -9,4 +9,4 @@ export { getProfileLoading } from './model/selectors/getProfileLoading/getProfil
 export { getProfileReadonly } from './model/selectors/getProfileReadonly/getProfileReadonly'
 export { profileActions, profileReducer } from './model/slice/profileSlice'
 export { EditableProfileCard } from './ui/EditableProfileCard/EditableProfileCard'
-export { ProfileSchema } from './model/types/EditableProfileCardSchema'
+export type { ProfileSchema } from './model/types/EditableProfileCardSchema'

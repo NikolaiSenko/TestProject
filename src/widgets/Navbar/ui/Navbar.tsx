@@ -1,4 +1,9 @@
-import { getUserAuthData, userActions } from 'entities/User'
+import {
+  getUserAuthData,
+  isUserAdmin,
+  isUserManager,
+  userActions,
+} from 'entities/User'
 import { LoginModal } from 'features/AuthByUsername'
 import { memo, useCallback, useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -20,6 +25,10 @@ export const Navbar = memo(({ className }: NavbarProps) => {
   const { t } = useTranslation()
   const userAuthData = useSelector(getUserAuthData)
   const dispatch = useDispatch()
+  const isAdmin = useSelector(isUserAdmin)
+  const isManager = useSelector(isUserManager)
+
+  const isToShowAdminPanel = isAdmin || isManager
 
   const [isAuthModal, setIsAuthModal] = useState(false)
 
@@ -60,6 +69,14 @@ export const Navbar = memo(({ className }: NavbarProps) => {
               content: t('sign out'),
               onClick: onLogout,
             },
+            ...(isToShowAdminPanel
+              ? [
+                  {
+                    content: t('Admin'),
+                    href: RoutePath.admin_panel,
+                  },
+                ]
+              : []),
           ]}
           trigger={<Avatar size={40} src={userAuthData.avatar} />}
         />

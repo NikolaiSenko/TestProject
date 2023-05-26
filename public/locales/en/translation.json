@@ -23,5 +23,8 @@
   "Enter your comment": "Enter your comment",
   "Continue reading": "Continue reading...",
   "Nikolai User": "Nikolai",
-  "Create Article": "Create Article"
+  "Create Article": "Create Article",
+  "Admin Page": "Admin Page",
+  "Admin": "Admin Page",
+  "Forbidden Page": "You have no authority for this page"
 }

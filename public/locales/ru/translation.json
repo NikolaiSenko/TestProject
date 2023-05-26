@@ -23,5 +23,8 @@
   "Enter your comment": "Введите ваш комментарий",
   "Continue reading": "Читать далее...",
   "Nikolai User": "Николай",
-  "Create Article": "Создать статью"
+  "Create Article": "Создать статью",
+  "Admin Page": "Страница администирования",
+  "Admin": "Администрация",
+  "Forbidden Page": "У вас нет прав для этой страницы"
 }

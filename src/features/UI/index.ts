@@ -1,4 +1,4 @@
 export { uiActions, uiReducer } from './model/slice/uiSlice'
 export { getUIScrollBYPath } from './model/selectors/ui'
-export { UISchema} from './model/types/UISchema'
+export type { UISchema} from './model/types/UISchema'
 

@@ -24,12 +24,13 @@ import { Icon } from 'shared/ui/Icon/Icon'
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent'
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent'
-import { ArticleBlock, ArticleBlockType } from '../../model/types/article'
+import { ArticleBlock } from '../../model/types/article'
 import { HStack, VStack } from 'shared/ui/Stack'
+import { ArticleBlockType } from '../../model/constants/articleConstants'
 
 interface ArticleDetailsProps {
   className?: string
-  articleId: string
+  articleId?: string
 }
 
 const reducers: ReducersList = {

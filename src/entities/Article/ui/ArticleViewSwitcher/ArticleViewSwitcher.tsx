@@ -1,4 +1,4 @@
-import { ArticleView } from '../../model/types/article'
+import { ArticleView } from '../../model/constants/articleConstants'
 import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './ArticleViewSwitcher.module.scss'
 import SmallIcon from 'shared/assets/icons/small.svg'

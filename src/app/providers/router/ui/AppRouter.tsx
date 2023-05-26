@@ -6,21 +6,27 @@ import {
 } from 'shared/config/routeConfig/routeConfig'
 import { PageLoader } from 'widgets/PageLoader'
 import { RequireAuth } from './RequireAuth'
+import { RequireAuthority } from './RequireAuthority'
 
 export const AppRouter = memo(() => {
   const renderWithWrapper = useCallback((route: AppRouteProps) => {
     const element = (
-      <Suspense fallback={<PageLoader />}>
-        {route.element}
-      </Suspense>
+      <Suspense fallback={<PageLoader />}>{route.element}</Suspense>
     )
+
+    const elementAuthCondition = route.authOnly ? (
+      <RequireAuth>
+        <RequireAuthority roles={route.roles}>{element}</RequireAuthority>
+      </RequireAuth>
+    ) : (
+      element
+    )
+
     return (
       <Route
         key={route.path}
         path={route.path}
-        element={
-          route.authOnly ? <RequireAuth>{element}</RequireAuth> : element
-        }
+        element={elementAuthCondition}
       />
     )
   }, [])
