@@ -89,6 +89,7 @@
     "loki": "^0.31.2",
     "mini-css-extract-plugin": "^2.5.3",
     "react-refresh": "^0.14.0",
+    "react-testing-library": "^8.0.1",
     "reg-cli": "^0.17.7",
     "regenerator-runtime": "^0.13.9",
     "sass": "^1.49.9",
