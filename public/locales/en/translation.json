@@ -26,5 +26,6 @@
   "Create Article": "Create Article",
   "Admin Page": "Admin Page",
   "Admin": "Admin Page",
-  "Forbidden Page": "You have no authority for this page"
+  "Forbidden Page": "You have no authority for this page",
+  "Logout": "Logout"
 }
