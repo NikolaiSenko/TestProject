@@ -1,13 +1,13 @@
 import { useState } from 'react'
-import { classNames } from 'shared/lib/classNames/classNames'
-import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button'
-import { LangSwitcher } from 'widgets/LangSwitcher'
-import { ThemeSwitcher } from 'widgets/ThemeSwitcher'
+import { classNames } from '@/shared/lib/classNames/classNames'
+import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/Button/Button'
+import { LangSwitcher } from '@/widgets/LangSwitcher'
+import { ThemeSwitcher } from '@/widgets/ThemeSwitcher'
 import { SidebarItem } from '../SidebarItem/SidebarItem'
 import cls from './Sidebar.module.scss'
 import { useSelector } from 'react-redux'
 import { getSidebarItems } from '../../model/selectors/getSidebarItems'
-import { VStack } from 'shared/ui/Stack'
+import { VStack } from '@/shared/ui/Stack'
 
 export interface SidebarProps {
   className?: string
