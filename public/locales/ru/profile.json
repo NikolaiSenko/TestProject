@@ -17,5 +17,7 @@
   "Data is missed": "Данные не указаны",
   "Country": "Укажиет страну",
   "Profile": "Профиль",
-  "profile.Error with profile loading occured": "Невозмодно отобразить профиль"
+  "Error with profile loading occured": "Невозмодно отобразить профиль",
+  "Rate this profile": "Оцените этот профиль",
+  "Please send feedback about this profile": "Пожалуйста опишите вашу оценку этого профиля, это поможет нам улучшить качество наших услуг"
 }

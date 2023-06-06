@@ -1,5 +1,4 @@
 import { memo } from 'react'
-import { useTranslation } from 'react-i18next'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import cls from './ArticleDetailPage.module.scss'
 import { ArticleDetails } from '@/entities/Article'
@@ -14,6 +13,7 @@ import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDet
 import { VStack } from '@/shared/ui/Stack'
 import { ArticleRecommendationsList } from '@/features/ArticleRecommendationsList'
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments'
+import { RateArticle } from '@/features/RateArticle'
 
 interface ArticleDetailPageProps {
   className?: string
@@ -24,9 +24,11 @@ const reducers: ReducersList = {
 
 const ArticleDetailPage = (props: ArticleDetailPageProps) => {
   const { className } = props
-  const { t } = useTranslation('articles')
-  const { id:articleId } = useParams<{ id: string }>()
+  const { id: articleId } = useParams<{ id: string }>()
 
+  if (!articleId) {
+    return null
+  }
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
@@ -34,6 +36,7 @@ const ArticleDetailPage = (props: ArticleDetailPageProps) => {
         <VStack gap="16" max>
           <ArticleDetailsPageHeader />
           <ArticleDetails articleId={articleId} />
+          <RateArticle articleId={articleId} />
           <ArticleRecommendationsList />
           <ArticleDetailsComments articleId={articleId} />
         </VStack>

@@ -17,5 +17,7 @@
   "Data is missed": "Data is missed",
   "Country": "Your country",
   "Profile": "Profile",
-  "profile.Error with profile loading occured": "Error with profile loading occured"
+  "Error with profile loading occured": "Error with profile loading occured",
+  "Rate this profile": "Rate This Profile",
+  "profile.Please send feedback about this profile": "Please send feedback about this profile. It will help us to improve our services"
 }

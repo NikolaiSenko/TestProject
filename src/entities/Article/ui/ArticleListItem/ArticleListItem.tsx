@@ -16,6 +16,7 @@ import {
   ArticleBlockType,
   ArticleView,
 } from '../../model/constants/articleConstants'
+import { HStack, VStack } from '@/shared/ui/Stack'
 
 interface ArticleListItemProps {
   className?: string
@@ -46,31 +47,33 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
         className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
       >
         <Card className={cls.card}>
-          <div className={cls.header}>
+          <HStack gap="8" align="center">
             <Avatar size={30} src={article.user.avatar} />
             <Text text={article.user.username} className={cls.username} />
             <Text text={article.createdAt} className={cls.date} />
-          </div>
+          </HStack>
           <Text title={article.title} className={cls.title} />
           {types}
           <img src={article.img} className={cls.img} alt={article.title} />
-          {textBlock && (
-            <ArticleTextBlockComponent
-              block={textBlock}
-              className={cls.textBlock}
-            />
-          )}
-          <div className={cls.footer}>
-            <AppLink
-              target={target}
-              to={RoutePath.article_details + article.id}
-            >
-              <Button theme={ButtonTheme.OUTLINE}>
-                {t('Читать далее...')}
-              </Button>
-            </AppLink>
-            {views}
-          </div>
+          <VStack gap="8">
+            {textBlock && (
+              <ArticleTextBlockComponent
+                block={textBlock}
+                className={cls.textBlock}
+              />
+            )}
+            <HStack align="center" max>
+              <AppLink
+                target={target}
+                to={RoutePath.article_details + article.id}
+              >
+                <Button theme={ButtonTheme.OUTLINE}>
+                  {t('Читать далее...')}
+                </Button>
+              </AppLink>
+              {views}
+            </HStack>
+          </VStack>
         </Card>
       </div>
     )
@@ -83,15 +86,18 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
       className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
     >
       <Card className={cls.card}>
-        <div className={cls.imageWrapper}>
-          <img alt={article.title} src={article.img} className={cls.img} />
-          <Text text={article.createdAt} className={cls.date} />
-        </div>
-        <div className={cls.infoWrapper}>
-          {types}
-          {views}
-        </div>
-        <Text text={article.title} className={cls.title} />
+        <VStack gap="16">
+          <VStack className={cls.imageWrapper}>
+            <img alt={article.title} src={article.img} className={cls.img} />
+            <Text text={article.createdAt} className={cls.date} />
+          </VStack>
+          <HStack align="center">
+            {types}
+            {views}
+          </HStack>
+
+          <Text text={article.title} className={cls.title} />
+        </VStack>
       </Card>
     </AppLink>
   )

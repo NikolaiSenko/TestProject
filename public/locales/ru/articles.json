@@ -18,5 +18,7 @@
   "Science": "Наука",
   "Articles Not Found": "Статьи не найдены",
   "You may like": "Вам также может понравится",
-  "articles.Error occurs while fetching articles": "Возникла ошибка при подгрузке статей"
+  "Error occurs while fetching articles": "Возникла ошибка при подгрузке статей",
+  "Rate this article": "Оцените статью",
+  "Please leave feedback about this article": "Пожалуйста, оставьте отзыв об этой статье, это поможет улучшить качество наших услуг"
 }

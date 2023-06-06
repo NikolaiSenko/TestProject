@@ -1,0 +1,1 @@
+export {RateProfileAsync as RateProfile} from './ui/RateProfile/RateProfileAsync'

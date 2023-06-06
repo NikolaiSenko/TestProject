@@ -1,20 +1,26 @@
-import { classNames } from '@/shared/lib/classNames/classNames'
 import { Page } from '@/widgets/Page/Page'
-import {
-  EditableProfileCard
-} from '@/features/EditableProfileCard'
+import { EditableProfileCard } from '@/features/EditableProfileCard'
 import { useParams } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { getUserAuthData } from '@/entities/User'
+import { VStack } from '@/shared/ui/Stack'
+import { RateProfile } from '@/features/RateProfile'
 
-export interface ProfilePageProps {
-  className?: string
-}
-
-const ProfilePage = ({}: ProfilePageProps) => {
+const ProfilePage = () => {
   const { id: profileId } = useParams<{ id: string }>()
+  const userAuthData = useSelector(getUserAuthData)
+  const userId = userAuthData?.id
+
+  if (!profileId) {
+    return null
+  }
 
   return (
-    <Page className={classNames('', {}, [])}>
+    <Page>
+      <VStack gap="8">
         <EditableProfileCard profileId={profileId} />
+        {userId !== profileId ? <RateProfile profileId={profileId} /> : null}
+      </VStack>
     </Page>
   )
 }

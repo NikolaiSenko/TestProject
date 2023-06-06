@@ -20,5 +20,8 @@
   "Science": "Science",
   "Articles Not Found": "Articles Not Found",
   "You may like": "You may like",
-  "articles.Error occurs while fetching articles": "Error occurs while fetching articles"
+  "Error occurs while fetching articles": "Error occurs while fetching articles",
+  "Rate this article": "Rate this article",
+  "Please leave feedback about this article": "Please leave feedback about this article, it will help us to improve our service"
+  
 }
