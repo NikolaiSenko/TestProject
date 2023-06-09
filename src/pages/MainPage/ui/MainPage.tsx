@@ -1,14 +1,14 @@
-import { BugButton } from '@/app/providers/ErrorBoundary'
 import { useTranslation } from 'react-i18next'
-import { Page } from '@/widgets/Page/Page'
+import { Page } from '@/widgets/Page'
+import { BugButton } from '@/features/BugButton'
 
 const MainPage = () => {
   const { t } = useTranslation('main')
   return (
-        <Page>
-          <BugButton/>
-          {t('main page')}
-      </Page>
+    <Page>
+      <BugButton />
+      {t('main page')}
+    </Page>
   )
 }
 

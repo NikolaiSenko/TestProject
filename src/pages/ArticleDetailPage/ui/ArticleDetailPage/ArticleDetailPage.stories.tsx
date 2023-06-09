@@ -4,7 +4,7 @@ import { Article } from '@/entities/Article'
 import {
   ArticleBlockType,
   ArticleType,
-} from '@/entities/Article/model/constants/articleConstants'
+} from '@/entities/Article'
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
 import ArticleDetailPage from './ArticleDetailPage'
 

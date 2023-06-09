@@ -3,8 +3,8 @@ import { classNames } from '@/shared/lib/classNames/classNames'
 import cls from './ArticleViewSwitcher.module.scss'
 import SmallIcon from '@/shared/assets/icons/small.svg'
 import BigIcon from '@/shared/assets/icons/big.svg'
-import { Button, ButtonTheme } from '@/shared/ui/Button/Button'
-import { Icon } from '@/shared/ui/Icon/Icon'
+import { Button, ButtonTheme } from '@/shared/ui/Button'
+import { Icon } from '@/shared/ui/Icon'
 
 interface ArticleViewSwitcherProps {
   className?: string

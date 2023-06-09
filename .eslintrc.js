@@ -82,7 +82,25 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
-    'senko-plugin/eslint-path-checker': 2,
+    'senko-plugin/eslint-path-checker': ['error', { alias: '@' }],
+    'senko-plugin/layer-import': [
+      'error',
+      {
+        alias: '@',
+        ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+      },
+    ],
+    'senko-plugin/public-api-imports': [
+      'error',
+      {
+        alias: '@',
+        testFilesPatterns: [
+          '**/*.test.*',
+          '**/*.story.*',
+          '**/StoreDecorator.tsx',
+        ],
+      },
+    ],
   },
   globals: {
     __IS_DEV__: true,

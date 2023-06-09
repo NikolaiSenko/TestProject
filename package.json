@@ -81,7 +81,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "eslint-plugin-senko-plugin": "^0.0.0",
+    "eslint-plugin-senko-plugin": "^0.0.5",
     "eslint-plugin-storybook": "^0.6.10",
     "file-loader": "^6.2.0",
     "fork-ts-checker-webpack-plugin": "^8.0.0",

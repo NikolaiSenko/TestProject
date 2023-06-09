@@ -1,8 +1,8 @@
 import { classNames } from '@/shared/lib/classNames/classNames'
 import cls from './ArticleListItem.module.scss'
 import { ArticleView } from '../../model/constants/articleConstants'
-import { Card } from '@/shared/ui/Card/Card'
-import { Skeleton } from '@/shared/ui/Skeleton/Skeleton'
+import { Card } from '@/shared/ui/Card'
+import { Skeleton } from '@/shared/ui/Skeleton'
 
 interface ArticleListItemSkeletonProps {
   className?: string
@@ -25,8 +25,8 @@ export const ArticleListItemSkeleton = (
             <Skeleton width={200} height={16} className={cls.username} />
             <Skeleton width={200} height={16} className={cls.date} />
           </div>
-          <Skeleton width={300} height={24} className={cls.title} />
-          <Skeleton width={300} height={200} className={cls.img} />
+          <Skeleton width={'100%'} height={24} className={cls.title} />
+          <Skeleton width={'100%'} height={200} className={cls.img} />
           <div className={cls.footer}>
             <Skeleton width={300} height={36} className={cls.title} />
           </div>

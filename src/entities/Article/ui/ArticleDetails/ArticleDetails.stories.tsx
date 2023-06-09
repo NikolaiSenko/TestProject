@@ -6,7 +6,7 @@ import {
   ArticleType,
 } from '../../model/constants/articleConstants'
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
-import { Theme } from '@/app/providers/ThemeProvider'
+import { Theme } from '@/shared/const/theme'
 export default {
   title: 'entities/ArticleDetails',
   component: ArticleDetails,

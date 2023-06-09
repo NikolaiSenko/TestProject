@@ -1,8 +1,8 @@
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
-import React, { memo, useCallback } from 'react'
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig'
-import { Avatar } from '@/shared/ui/Avatar/Avatar'
+import { memo, useCallback } from 'react'
+import { RoutePath } from '@/shared/const/router'
+import { Avatar } from '@/shared/ui/Avatar'
 import { Dropdown } from '@/shared/ui/Popups'
 import { useDispatch, useSelector } from 'react-redux'
 import {
@@ -56,7 +56,7 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
           onClick: onLogout,
         },
       ]}
-      trigger={<Avatar size={30} src={authData.avatar} />}
+      trigger={<Avatar size={35} src={authData.avatar} />}
     />
   )
 })

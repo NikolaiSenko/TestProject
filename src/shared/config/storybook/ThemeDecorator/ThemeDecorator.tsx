@@ -1,5 +1,7 @@
+// eslint-disable-next-line senko-plugin/layer-import
+import { ThemeProvider } from '@/app/providers/ThemeProvider'
+import { Theme } from '@/shared/const/theme'
 import { Story } from '@storybook/react'
-import { Theme, ThemeProvider } from '@/app/providers/ThemeProvider'
 
 export const ThemeDecorator = (theme: Theme) => (StoryComponent: Story) =>
   (

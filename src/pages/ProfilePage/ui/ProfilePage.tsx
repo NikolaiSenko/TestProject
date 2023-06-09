@@ -1,4 +1,4 @@
-import { Page } from '@/widgets/Page/Page'
+import { Page } from '@/widgets/Page'
 import { EditableProfileCard } from '@/features/EditableProfileCard'
 import { useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
@@ -11,15 +11,11 @@ const ProfilePage = () => {
   const userAuthData = useSelector(getUserAuthData)
   const userId = userAuthData?.id
 
-  if (!profileId) {
-    return null
-  }
-
   return (
     <Page>
       <VStack gap="8">
         <EditableProfileCard profileId={profileId} />
-        {userId !== profileId ? <RateProfile profileId={profileId} /> : null}
+        {userId !== profileId ? <RateProfile profileId={profileId || ''} /> : null}
       </VStack>
     </Page>
   )
