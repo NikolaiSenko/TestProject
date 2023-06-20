@@ -1,29 +1,31 @@
-import { ArticleView } from '../../model/constants/articleConstants'
+import { memo } from 'react'
 import { classNames } from '@/shared/lib/classNames/classNames'
-import cls from './ArticleViewSwitcher.module.scss'
-import SmallIcon from '@/shared/assets/icons/small.svg'
-import BigIcon from '@/shared/assets/icons/big.svg'
-import { Button, ButtonTheme } from '@/shared/ui/Button'
+import ListIcon from '@/shared/assets/icons/big.svg'
+import TiledIcon from '@/shared/assets/icons/small.svg'
 import { Icon } from '@/shared/ui/Icon'
+import { Button, ButtonTheme } from '@/shared/ui/Button'
+import cls from './ArticleViewSelector.module.scss'
+import { ArticleView } from '@/entities/Article'
+import { HStack } from '@/shared/ui/Stack'
 
-interface ArticleViewSwitcherProps {
+interface ArticleViewSelectorProps {
   className?: string
   view: ArticleView
-  onViewClick?: (ArticleView: ArticleView) => void
+  onViewClick?: (view: ArticleView) => void
 }
 
 const viewTypes = [
   {
     view: ArticleView.SMALL,
-    icon: SmallIcon,
+    icon: TiledIcon,
   },
   {
     view: ArticleView.BIG,
-    icon: BigIcon,
+    icon: ListIcon,
   },
 ]
 
-export const ArticleViewSwitcher = (props: ArticleViewSwitcherProps) => {
+export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
   const { className, view, onViewClick } = props
 
   const onClick = (newView: ArticleView) => () => {
@@ -31,11 +33,14 @@ export const ArticleViewSwitcher = (props: ArticleViewSwitcherProps) => {
   }
 
   return (
-    <div className={classNames(cls.ArticleViewSwitcher, {}, [className])}>
+    <HStack
+      gap="8"
+      className={classNames(cls.ArticleViewSelector, {}, [className])}
+    >
       {viewTypes.map((viewType) => (
         <Button
-          theme={ButtonTheme.CLEAR}
           key={viewType.view}
+          theme={ButtonTheme.CLEAR}
           onClick={onClick(viewType.view)}
         >
           <Icon
@@ -46,6 +51,6 @@ export const ArticleViewSwitcher = (props: ArticleViewSwitcherProps) => {
           />
         </Button>
       ))}
-    </div>
+    </HStack>
   )
-}
+})

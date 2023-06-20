@@ -1,9 +1,11 @@
-export { ArticleTypeTabs } from './ui/ArticleTypeTabs/ArticleTypeTabs'
-export { ArticleSortSelector } from './ui/ArticleSortSelector/ArticleSortSelector'
-export { ArticleViewSwitcher } from './ui/ArticleViewSwitcher/ArticleViewSwitcher'
 export { ArticleList } from './ui/ArticleList/ArticleList'
 export { getArticleDetailsData } from './model/selectors/getArticleDetails'
 export { ArticleDetails } from './ui/ArticleDetails/ArticleDetails'
-export { ArticleView, ArticleSortField, ArticleType,ArticleBlockType } from './model/constants/articleConstants'
+export {
+  ArticleView,
+  ArticleSortField,
+  ArticleType,
+  ArticleBlockType,
+} from './model/constants/articleConstants'
 export type { ArticleDetailsSchema } from './model/types/articleDetailsSchema'
-export type{ Article} from './model/types/article'
+export type { Article } from './model/types/article'

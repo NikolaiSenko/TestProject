@@ -7,7 +7,7 @@ import EyeIcon from '@/shared/assets/icons/eye.svg'
 import { Card } from '@/shared/ui/Card'
 import { Avatar } from '@/shared/ui/Avatar'
 import { Button, ButtonTheme } from '@/shared/ui/Button'
-import { RoutePath } from '@/shared/const/router'
+import { getRouteArticleDetails } from '@/shared/const/router'
 import { AppLink } from '@/shared/ui/AppLink'
 import cls from './ArticleListItem.module.scss'
 import { Article, ArticleTextBlock } from '../../model/types/article'
@@ -17,6 +17,8 @@ import {
   ArticleView,
 } from '../../model/constants/articleConstants'
 import { HStack, VStack } from '@/shared/ui/Stack'
+import { AppImage } from '@/shared/ui/AppImage'
+import { Skeleton } from '@/shared/ui/Skeleton'
 
 interface ArticleListItemProps {
   className?: string
@@ -36,6 +38,9 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
       <Icon Svg={EyeIcon} />
     </>
   )
+  const errorFallback = <Text title={t('Error occured with image')} />
+  const loadingFallbackBig = <Skeleton width={'100%'} height={250} />
+  const loadingFallbackSmall = <Skeleton width={200} height={200} />
 
   if (view === ArticleView.BIG) {
     const textBlock = article.blocks.find(
@@ -54,7 +59,13 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
           </HStack>
           <Text title={article.title} className={cls.title} />
           {types}
-          <img src={article.img} className={cls.img} alt={article.title} />
+          <AppImage
+            src={article.img}
+            className={cls.img}
+            alt={article.title}
+            errorFallback={errorFallback}
+            fallback={loadingFallbackBig}
+          />
           <VStack gap="8">
             {textBlock && (
               <ArticleTextBlockComponent
@@ -63,10 +74,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
               />
             )}
             <HStack align="center" max>
-              <AppLink
-                target={target}
-                to={RoutePath.article_details + article.id}
-              >
+              <AppLink target={target} to={getRouteArticleDetails(article.id)}>
                 <Button theme={ButtonTheme.OUTLINE}>
                   {t('Читать далее...')}
                 </Button>
@@ -82,13 +90,19 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
   return (
     <AppLink
       target={target}
-      to={RoutePath.article_details + article.id}
+      to={getRouteArticleDetails(article.id)}
       className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
     >
       <Card className={cls.card}>
         <VStack gap="16">
           <VStack className={cls.imageWrapper}>
-            <img alt={article.title} src={article.img} className={cls.img} />
+            <AppImage
+              alt={article.title}
+              src={article.img}
+              className={cls.img}
+              errorFallback={errorFallback}
+              fallback={loadingFallbackSmall}
+            />
             <Text text={article.createdAt} className={cls.date} />
           </VStack>
           <HStack align="center">

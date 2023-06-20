@@ -5,7 +5,7 @@ import { BugButton } from '@/features/BugButton'
 const MainPage = () => {
   const { t } = useTranslation('main')
   return (
-    <Page>
+    <Page data-testid='MainPage'>
       <BugButton />
       {t('main page')}
     </Page>

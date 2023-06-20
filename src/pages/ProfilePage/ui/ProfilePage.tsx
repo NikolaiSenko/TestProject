@@ -12,7 +12,7 @@ const ProfilePage = () => {
   const userId = userAuthData?.id
 
   return (
-    <Page>
+    <Page data-testid='ProfilePage'>
       <VStack gap="8">
         <EditableProfileCard profileId={profileId} />
         {userId !== profileId ? <RateProfile profileId={profileId || ''} /> : null}

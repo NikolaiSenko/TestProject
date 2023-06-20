@@ -1,10 +1,4 @@
-import {
-  ArticleSortField,
-  ArticleSortSelector,
-  ArticleTypeTabs,
-  ArticleView,
-  ArticleViewSwitcher,
-} from '@/entities/Article'
+import { ArticleSortField, ArticleView } from '@/entities/Article'
 import {
   getArticlesPageOrder,
   getArticlesPageSearch,
@@ -21,11 +15,14 @@ import cls from './ArticlesPageFilters.module.scss'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { Card } from '@/shared/ui/Card'
 import { Input } from '@/shared/ui/Input'
-import { SortOrder } from '@/shared/types'
+import { SortOrder } from '@/shared/types/sort'
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList'
 import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce'
 import { ArticleType } from '@/entities/Article'
 import { HStack, VStack } from '@/shared/ui/Stack'
+import { ArticleSortSelector } from '@/features/ArticleSortSelector'
+import { ArticleViewSelector } from '@/features/ArticleViewSelector'
+import { ArticleTypeTabs } from '@/features/ArticleTypeTabs'
 
 interface ArticlesPageFiltersProps {
   className?: string
@@ -87,15 +84,19 @@ export const ArticlesPageFilters = (props: ArticlesPageFiltersProps) => {
   )
 
   return (
-    <VStack gap='16' max className={classNames(cls.ArticlesPageFilters, {}, [className])}>
-      <HStack justify='between' max className={cls.sortWrapper}>
+    <VStack
+      gap="16"
+      max
+      className={classNames(cls.ArticlesPageFilters, {}, [className])}
+    >
+      <HStack justify="between" max className={cls.sortWrapper}>
         <ArticleSortSelector
           order={order}
           sort={sort}
           onChangeOrder={onChangeOrder}
           onChangeSort={onChangeSort}
         />
-        <ArticleViewSwitcher view={view} onViewClick={onChangeView} />
+        <ArticleViewSelector view={view} onViewClick={onChangeView} />
       </HStack>
       <Card className={cls.search}>
         <Input

@@ -21,6 +21,7 @@ module.exports = {
     'i18next',
     'react-hooks',
     'senko-plugin',
+    'unused-imports'
   ],
   rules: {
     quotes: [
@@ -37,6 +38,7 @@ module.exports = {
         extensions: ['.js', '.jsx', '.tsx'],
       },
     ],
+    'unused-imports/no-unused-imports': 'error',
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
     'no-unused-vars': 'off',

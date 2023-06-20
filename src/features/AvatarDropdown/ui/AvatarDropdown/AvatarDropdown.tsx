@@ -1,7 +1,6 @@
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
 import { memo, useCallback } from 'react'
-import { RoutePath } from '@/shared/const/router'
 import { Avatar } from '@/shared/ui/Avatar'
 import { Dropdown } from '@/shared/ui/Popups'
 import { useDispatch, useSelector } from 'react-redux'
@@ -11,6 +10,7 @@ import {
   isUserManager,
   userActions,
 } from '@/entities/User'
+import { getRouteAdmin, getRouteProfile } from '@/shared/const/router'
 
 interface AvatarDropdownProps {
   className?: string
@@ -43,20 +43,20 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
           ? [
               {
                 content: t('Admin'),
-                href: RoutePath.admin_panel,
+                href: getRouteAdmin(),
               },
             ]
           : []),
         {
           content: t('profile page'),
-          href: RoutePath.profile + authData.id,
+          href: getRouteProfile(authData.id),
         },
         {
           content: t('Logout'),
           onClick: onLogout,
         },
       ]}
-      trigger={<Avatar size={35} src={authData.avatar} />}
+      trigger={<Avatar size={35} src={authData.avatar} fallbackInverted />}
     />
   )
 })

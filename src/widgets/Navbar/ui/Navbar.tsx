@@ -3,7 +3,7 @@ import { LoginModal } from '@/features/AuthByUsername'
 import { memo, useCallback, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
-import { RoutePath } from '@/shared/const/router'
+import { getRouteArticleCreate } from '@/shared/const/router'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink'
 import { Button, ButtonTheme } from '@/shared/ui/Button'
@@ -39,7 +39,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
           theme={TextTheme.INVERTED}
         />
         <AppLink
-          to={RoutePath.article_create}
+          to={getRouteArticleCreate()}
           theme={AppLinkTheme.SECONDARY}
           className={cls.createBtn}
         >

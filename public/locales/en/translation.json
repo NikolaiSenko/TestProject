@@ -29,5 +29,6 @@
   "Forbidden Page": "You have no authority for this page",
   "Logout": "Logout",
   "Your feedback": "Type your feedback here",
-  "Thanks for your feedback": "Thanks for your feedback!"
+  "Thanks for your feedback": "Thanks for your feedback!",
+  "Error occured with image": "Error occured while loading image"
 }

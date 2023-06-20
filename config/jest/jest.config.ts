@@ -26,6 +26,7 @@ export default {
   moduleNameMapper: {
     '\\.s?css$': 'identity-obj-proxy',
     '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+    '^@/(.*)$': '<rootDir>/src/$1',
   },
   transformIgnorePatterns: ['node_modules/(?!axios)'],
   // Indicates whether the coverage information should be collected while executing the test
