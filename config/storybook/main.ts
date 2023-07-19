@@ -5,17 +5,24 @@ module.exports = {
     {
       name: '@storybook/addon-essentials',
       options: {
-        backgrounds: false, // 👈 disable the backgrounds addon
+        backgrounds: false,
       },
     },
     '@storybook/addon-interactions',
-    'storybook-react-i18next',
-    'storybook-addon-mock',
     'storybook-addon-themes',
+    'storybook-addon-mock'
   ],
-  framework: '@storybook/react',
-  core: {
-    builder: '@storybook/builder-webpack5',
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: {},
+  },
+  features: {
+    storyStoreV7: false,
   },
   staticDirs: ['../../public'],
+  docs: {
+    autodocs: true,
+  },
 }
+
+export {}

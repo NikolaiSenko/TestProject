@@ -12,9 +12,7 @@ import {
   addCommentReducer,
 } from '../../model/slice/addCommentSlice'
 import { useSelector } from 'react-redux'
-import {
-  getAddCommentText,
-} from '../../model/selectors/AddCommentSelectors'
+import { getAddCommentText } from '../../model/selectors/AddCommentSelectors'
 import { useCallback } from 'react'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { HStack } from '@/shared/ui/Stack'
@@ -34,7 +32,6 @@ const AddCommentForm = (props: AddCommentFormProps) => {
   const dispatch = useAppDispatch()
   const text = useSelector(getAddCommentText)
 
-
   const onChangeComment = useCallback(
     (value: string) => {
       dispatch(addCommentActions.setText(value))
@@ -49,14 +46,22 @@ const AddCommentForm = (props: AddCommentFormProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <HStack justify='between' max className={classNames(cls.AddCommentForm, {}, [className])}>
+      <HStack
+        data-testid="AddCommentForm"
+        justify="between"
+        max
+        className={classNames(cls.AddCommentForm, {}, [className])}
+      >
         <Input
           className={cls.input}
           placeholder={t('Enter your comment')}
           value={text}
           onChange={onChangeComment}
+          data-testid="AddCommentForm.Input"
         />
-        <Button onClick={onSendHandler}>{t('Send')}</Button>
+        <Button onClick={onSendHandler} data-testid="AddCommentForm.Button">
+          {t('Send')}
+        </Button>
       </HStack>
     </DynamicModuleLoader>
   )

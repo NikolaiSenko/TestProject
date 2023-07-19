@@ -85,6 +85,7 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
     'senko-plugin/eslint-path-checker': ['error', { alias: '@' }],
+    '@typescript-eslint/no-namespace': 'off',
     'senko-plugin/layer-import': [
       'error',
       {

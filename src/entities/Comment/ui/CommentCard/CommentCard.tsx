@@ -21,6 +21,7 @@ export const CommentCard = (props: CommentCardProps) => {
     return (
       <VStack max gap='8'
         className={classNames(cls.CommentCard, {}, [className, cls.loading])}
+        data-testid='CommentCard.Loading'
       >
         <HStack className={cls.header}>
           <Skeleton border={'50%'} width={30} height={30} />
@@ -41,6 +42,7 @@ export const CommentCard = (props: CommentCardProps) => {
       gap="8"
       max
       className={classNames(cls.CommentCard, {}, [className])}
+      data-testid='CommentCard.Content'
     >
       <AppLink
         to={getRouteProfile(comment?.user.id)}

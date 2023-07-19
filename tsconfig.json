@@ -47,6 +47,8 @@
     "./src/**/*.*.tsx",
     "./src/**/*.*.ts",
     "./src/**/*.js",
-    "./config/storybook/*.js"
+    "./config/storybook/*.js",
+    "config/storybook/preview.ts",
+    "config/storybook/main.ts"
   ]
 }
